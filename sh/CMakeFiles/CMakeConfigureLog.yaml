@@ -1,0 +1,281 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:54 (project)"
+    message: |
+      The system is: Linux - 6.8.0-45-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:54 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/clang 
+      Build flags: -I/home/ormastes/dev/llvm/llvm-project/llvm/include
+      Id flags: -c;--target=x86_64-unknown-linux-gnu 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is Clang, found in:
+        /home/ormastes/dev/llvm/sh/CMakeFiles/3.30.3/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:54 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/clang++ 
+      Build flags: -I/home/ormastes/dev/llvm/llvm-project/llvm/include
+      Id flags: -c;--target=x86_64-unknown-linux-gnu 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is Clang, found in:
+        /home/ormastes/dev/llvm/sh/CMakeFiles/3.30.3/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:54 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-dabWak"
+      binary: "/home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-dabWak"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_COMPILER_TARGET: "x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf"
+      CMAKE_C_COMPILER_TARGET: "x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf"
+      CMAKE_C_FLAGS: "  -I/home/ormastes/dev/llvm/llvm-project/llvm/include "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fuse-ld=lld  -Wl,--threads=8"
+      CMAKE_SYSROOT: "/"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-dabWak'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_5c121
+        [1/2] /usr/bin/clang --target=x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf --sysroot=/   -I/home/ormastes/dev/llvm/llvm-project/llvm/include     -v -MD -MT CMakeFiles/cmTC_5c121.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_5c121.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_5c121.dir/CMakeCCompilerABI.c.o -c /usr/local/share/cmake-3.30/Modules/CMakeCCompilerABI.c
+        FAILED: CMakeFiles/cmTC_5c121.dir/CMakeCCompilerABI.c.o 
+        /usr/bin/clang --target=x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf --sysroot=/   -I/home/ormastes/dev/llvm/llvm-project/llvm/include     -v -MD -MT CMakeFiles/cmTC_5c121.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_5c121.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_5c121.dir/CMakeCCompilerABI.c.o -c /usr/local/share/cmake-3.30/Modules/CMakeCCompilerABI.c
+        clang: error: no input files
+        /bin/sh: 1: arm-none-eabi: not found
+        /bin/sh: 1: riscv32-unknown-elf: not found
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:54 (project)"
+    checks:
+      - "Check for working C compiler: /usr/bin/clang"
+    directories:
+      source: "/home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-c4razL"
+      binary: "/home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-c4razL"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_COMPILER_TARGET: "x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf"
+      CMAKE_C_COMPILER_TARGET: "x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf"
+      CMAKE_C_FLAGS: "  -I/home/ormastes/dev/llvm/llvm-project/llvm/include "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fuse-ld=lld  -Wl,--threads=8"
+      CMAKE_SYSROOT: "/"
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-c4razL'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_b9162
+        [1/2] /usr/bin/clang --target=x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf --sysroot=/   -I/home/ormastes/dev/llvm/llvm-project/llvm/include -MD -MT CMakeFiles/cmTC_b9162.dir/testCCompiler.c.o -MF CMakeFiles/cmTC_b9162.dir/testCCompiler.c.o.d -o CMakeFiles/cmTC_b9162.dir/testCCompiler.c.o -c /home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-c4razL/testCCompiler.c
+        FAILED: CMakeFiles/cmTC_b9162.dir/testCCompiler.c.o 
+        /usr/bin/clang --target=x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf --sysroot=/   -I/home/ormastes/dev/llvm/llvm-project/llvm/include -MD -MT CMakeFiles/cmTC_b9162.dir/testCCompiler.c.o -MF CMakeFiles/cmTC_b9162.dir/testCCompiler.c.o.d -o CMakeFiles/cmTC_b9162.dir/testCCompiler.c.o -c /home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-c4razL/testCCompiler.c
+        clang: error: no input files
+        /bin/sh: 1: arm-none-eabi: not found
+        /bin/sh: 1: riscv32-unknown-elf: not found
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:54 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/clang 
+      Build flags: -I/home/ormastes/dev/llvm/llvm-project/llvm/include
+      Id flags: -c;--target=x86_64-unknown-linux-gnu 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is Clang, found in:
+        /home/ormastes/dev/llvm/sh/CMakeFiles/3.30.3/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:54 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/clang++ 
+      Build flags: -I/home/ormastes/dev/llvm/llvm-project/llvm/include
+      Id flags: -c;--target=x86_64-unknown-linux-gnu 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is Clang, found in:
+        /home/ormastes/dev/llvm/sh/CMakeFiles/3.30.3/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:54 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-KbmZi9"
+      binary: "/home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-KbmZi9"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_COMPILER_TARGET: "x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf"
+      CMAKE_C_COMPILER_TARGET: "x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf"
+      CMAKE_C_FLAGS: "  -I/home/ormastes/dev/llvm/llvm-project/llvm/include "
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-fuse-ld=lld  -Wl,--threads=8"
+      CMAKE_SYSROOT: "/"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-KbmZi9'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_cf32b
+        [1/2] /usr/bin/clang --target=x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf --sysroot=/   -I/home/ormastes/dev/llvm/llvm-project/llvm/include     -v -MD -MT CMakeFiles/cmTC_cf32b.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_cf32b.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_cf32b.dir/CMakeCCompilerABI.c.o -c /usr/local/share/cmake-3.30/Modules/CMakeCCompilerABI.c
+        FAILED: CMakeFiles/cmTC_cf32b.dir/CMakeCCompilerABI.c.o 
+        /usr/bin/clang --target=x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf --sysroot=/   -I/home/ormastes/dev/llvm/llvm-project/llvm/include     -v -MD -MT CMakeFiles/cmTC_cf32b.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_cf32b.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_cf32b.dir/CMakeCCompilerABI.c.o -c /usr/local/share/cmake-3.30/Modules/CMakeCCompilerABI.c
+        clang: error: no input files
+        /bin/sh: 1: arm-none-eabi: not found
+        /bin/sh: 1: riscv32-unknown-elf: not found
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/usr/local/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:54 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-Bdy2HB"
+      binary: "/home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-Bdy2HB"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_COMPILER_TARGET: "x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf"
+      CMAKE_CXX_FLAGS: "  -I/home/ormastes/dev/llvm/llvm-project/llvm/include "
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_C_COMPILER_TARGET: "x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf"
+      CMAKE_EXE_LINKER_FLAGS: "-fuse-ld=lld  -Wl,--threads=8"
+      CMAKE_SYSROOT: "/"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-Bdy2HB'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_82a70
+        [1/2] /usr/bin/clang++ --target=x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf --sysroot=/   -I/home/ormastes/dev/llvm/llvm-project/llvm/include     -v -MD -MT CMakeFiles/cmTC_82a70.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_82a70.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_82a70.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
+        FAILED: CMakeFiles/cmTC_82a70.dir/CMakeCXXCompilerABI.cpp.o 
+        /usr/bin/clang++ --target=x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf --sysroot=/   -I/home/ormastes/dev/llvm/llvm-project/llvm/include     -v -MD -MT CMakeFiles/cmTC_82a70.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_82a70.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_82a70.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp
+        clang++: error: no input files
+        /bin/sh: 1: arm-none-eabi: not found
+        /bin/sh: 1: riscv32-unknown-elf: not found
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/local/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/local/share/cmake-3.30/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake/modules/CheckCompilerVersion.cmake:77 (check_cxx_source_compiles)"
+      - "cmake/config-ix.cmake:16 (include)"
+      - "CMakeLists.txt:898 (include)"
+    checks:
+      - "Performing Test LLVM_LIBSTDCXX_MIN"
+    directories:
+      source: "/home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-vOfctE"
+      binary: "/home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-vOfctE"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_COMPILER_TARGET: "x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf"
+      CMAKE_CXX_FLAGS: "  -I/home/ormastes/dev/llvm/llvm-project/llvm/include "
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_C_COMPILER_TARGET: "x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf"
+      CMAKE_EXE_LINKER_FLAGS: "-fuse-ld=lld  -Wl,--threads=8"
+      CMAKE_MODULE_PATH: "/home/ormastes/dev/llvm/llvm-project/llvm/cmake;/home/ormastes/dev/llvm/llvm-project/llvm/cmake/modules;/home/ormastes/dev/llvm/llvm-project/llvm/../cmake/Modules"
+      CMAKE_SYSROOT: "/"
+    buildResult:
+      variable: "LLVM_LIBSTDCXX_MIN"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-vOfctE'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_df885
+        [1/2] /usr/bin/clang++ --target=x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf --sysroot=/ -DLLVM_LIBSTDCXX_MIN  -I/home/ormastes/dev/llvm/llvm-project/llvm/include   -std=c++0x -g -std=c++17 -MD -MT CMakeFiles/cmTC_df885.dir/src.cxx.o -MF CMakeFiles/cmTC_df885.dir/src.cxx.o.d -o CMakeFiles/cmTC_df885.dir/src.cxx.o -c /home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-vOfctE/src.cxx
+        FAILED: CMakeFiles/cmTC_df885.dir/src.cxx.o 
+        /usr/bin/clang++ --target=x86_64-unknown-linux-gnu;arm-none-eabi;riscv32-unknown-elf --sysroot=/ -DLLVM_LIBSTDCXX_MIN  -I/home/ormastes/dev/llvm/llvm-project/llvm/include   -std=c++0x -g -std=c++17 -MD -MT CMakeFiles/cmTC_df885.dir/src.cxx.o -MF CMakeFiles/cmTC_df885.dir/src.cxx.o.d -o CMakeFiles/cmTC_df885.dir/src.cxx.o -c /home/ormastes/dev/llvm/sh/CMakeFiles/CMakeScratch/TryCompile-vOfctE/src.cxx
+        clang++: error: no input files
+        /bin/sh: 1: arm-none-eabi: not found
+        /bin/sh: 1: riscv32-unknown-elf: not found
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+...

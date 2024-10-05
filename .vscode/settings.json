@@ -1,0 +1,7 @@
+{
+    "cmake.options.statusBarVisibility": "visible",
+    "cmake.sourceDirectory": "llvm-project",
+    "files.associations": {
+        "__config": "cpp"
+    }
+}
