@@ -10,9 +10,6 @@ COPY keys/ /workspace/keys
 RUN cd /workspace/keys && chmod 777 instKey.sh && ./instKey.sh
 RUN cd /workspace/keys/users && chmod 777 make_users.sh && ./make_users.sh
 
-COPY run_code.sh /workspace/run_code.sh
-RUN cd /workspace && chmod 777 run_code.sh
-
 RUN apt update
 RUN apt upgrade -y
 
@@ -25,15 +22,12 @@ RUN DEBIAN_FRONTEND=noninteractive add-apt-repository "deb [arch=amd64] https://
 RUN apt update -y
 RUN apt install code -y
 
-# install code extensions
-RUN code --no-sandbox --user-data-dir /root/.code --install-extension ms-vscode.cmake-tools --install-extension ms-vscode.cpptools-extension-pack --install-extension ms-azuretools.vscode-docker --install-extension llvm-vs-code-extensions.vscode-clangd --install-extension mads-hartmann.bash-ide-vscode --install-extension github.copilot --install-extension github.copilot-chat \
- --install-extension ms-vscode-remote.remote-containers --install-extension DavidAnson.vscode-markdownlint --install-extension vadimcn.vscode-lldb --install-extension redhat.vscode-xml --install-extension tamasfe.even-better-toml --install-extension rust-lang.rust-analyzer --install-extension ms-python.python --install-extension ms-python.debugpy
-
 # it need interactive input. I don't know how it to automate it.
 #RUN cd /workspace && curl -Lk 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64' --output vscode_cli.tar.gz
 #RUN cd /workspace && tar -xf vscode_cli.tar.gz
 # code tunnel user login --provider <provider>
-RUN cd /workspace && code --no-sandbox --user-data-dir /root/.code tunnel rename build
+# --no-sandbox --user-data-dir /root/.code 
+RUN cd /workspace && code tunnel rename build
 
 # install basic tools
 RUN DEBIAN_FRONTEND=noninteractive apt install -y software-properties-common openssh-server net-tools 
@@ -81,13 +75,16 @@ RUN cd /workspace/downloads/picolibc &&  meson build_riscv -Dincludedir=picolibc
 RUN cd /workspace/downloads/picolibc/build_riscv && ninja
 RUN cd /workspace/downloads/picolibc/build_riscv && ninja install
 
-# --no-sleep --server-data-dir /root/.code --extensions-dir /root/.code/ext --cli-data-dir /root/.code/cli
-RUN code tunnel --install-extension ms-vscode.cmake-tools --install-extension ms-vscode.cpptools-extension-pack --install-extension ms-azuretools.vscode-docker --install-extension llvm-vs-code-extensions.vscode-clangd --install-extension mads-hartmann.bash-ide-vscode --install-extension github.copilot --install-extension github.copilot-chat \
- --install-extension ms-vscode-remote.remote-containers --install-extension DavidAnson.vscode-markdownlint --install-extension vadimcn.vscode-lldb --install-extension redhat.vscode-xml --install-extension tamasfe.even-better-toml --install-extension rust-lang.rust-analyzer --install-extension ms-python.python --install-extension ms-python.debugpy
-
-# setup git change user name and email
-RUN git config --global user.name "Jonghyun Yoon"
 RUN git config --global user.email "ormastes@gmail.com"
+RUN git config --global user.name "Jonghyun Yoon"
+
+COPY run_code.sh /workspace/run_code.sh
+RUN cd /workspace && chmod 777 run_code.sh
+
+# --no-sleep --server-data-dir /root/.code --extensions-dir /root/.code/ext --cli-data-dir /root/.code/cli
+#RUN code tunnel --install-extension ms-vscode.cmake-tools   --install-extension ms-vscode.cpptools-extension-pack --install-extension ms-azuretools.vscode-docker --install-extension llvm-vs-code-extensions.vscode-clangd --install-extension mads-hartmann.bash-ide-vscode --install-extension github.copilot --install-extension github.copilot-chat \
+# --install-extension ms-vscode-remote.remote-containers --install-extension DavidAnson.vscode-markdownlint --install-extension vadimcn.vscode-lldb --install-extension redhat.vscode-xml --install-extension tamasfe.even-better-toml --install-extension rust-lang.rust-analyzer --install-extension ms-python.python --install-extension ms-python.debugpy
+
 
 # Setup default command and/or parameters.
 EXPOSE 22
