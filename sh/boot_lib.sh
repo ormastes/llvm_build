@@ -21,7 +21,7 @@ export RISCV_GCC="RISCV_GCC"
 FILENAME=$(basename "$0")
 FILENAME_WO_EXT="_${FILENAME%.*}"
 
-export BUILD_DIR=../${FILENAME_WO_EXT}_build
+export BUILD_DIR=../build/${FILENAME_WO_EXT}_build
 
 #############################################################################################################################################
 export COMPILER_FOLDER=""
@@ -250,7 +250,7 @@ export LIBCXX_INSTALL="-DLIBCXXABI_INSTALL_LIBRARY_DIR=${TRIPLE_LIB_INSTALL_DIR}
 
 set -x  # Echo the next command and then run it
 
-cmake ../llvm-project/${CMAKE_START_MODULE} -DCMAKE_TOOLCHAIN_FILE=../sh/linux_system_clang_nolld.cmake --fresh \
+cmake ../../llvm-project/${CMAKE_START_MODULE} -DCMAKE_TOOLCHAIN_FILE=../../toolchain/linux_system_clang_nolld.cmake --fresh \
    -DCMAKE_BUILD_TYPE=RelWithDebInfo -DLLVM_INCLUDE_TESTS=FALSE  \
    -DLLVM_ENABLE_RUNTIMES="libcxx;libcxxabi;libunwind" \
    ${TRIPLE_SETTING} \

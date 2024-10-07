@@ -236,8 +236,8 @@ export LIBCXX_INSTALL="-DLIBCXXABI_INSTALL_LIBRARY_DIR=${TRIPLE_LIB_INSTALL_DIR}
 ############################################################################################################################################
 
 mkdir $INSTALL_DIR
-rm -rf $BUILD_DIR
-rm $BUILD_DIR/CMakeCache.txt
+#rm -rf $BUILD_DIR
+#rm $BUILD_DIR/CMakeCache.txt
 mkdir $BUILD_DIR
 pushd $BUILD_DIR
 
@@ -249,10 +249,9 @@ pushd $BUILD_DIR
 
 set -x  # Echo the next command and then run it
 
-cmake ../llvm-project/${CMAKE_START_MODULE} -DCMAKE_TOOLCHAIN_FILE=../sh/linux_system_clang_nolld.cmake --fresh \
+cmake ../../llvm-project/${CMAKE_START_MODULE} -DCMAKE_TOOLCHAIN_FILE=../../toolchain/linux_system_clang_nolld.cmake --fresh \
    -DCMAKE_BUILD_TYPE=RelWithDebInfo -DLLVM_INCLUDE_TESTS=FALSE \
    -DLLVM_ENABLE_PROJECTS="libc;compiler-rt;clang;lld;lldb;clang-tools-extra" \
-   -DLLVM_ENABLE_RUNTIMES="libcxx;libcxxabi;libunwind" \
    ${TRIPLE_SETTING} \
    ${TARGET_SETTING} \
    ${BUILD_FIX_SETTING} \

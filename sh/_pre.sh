@@ -18,5 +18,5 @@ PARENT_COMMAND=${BASH_SOURCE[1]}
 FILENAME=$(basename "$PARENT_COMMAND")
 FILENAME_WO_EXT="_${FILENAME%.*}"
 
-export BUILD_DIR=$(realpath ../${FILENAME_WO_EXT}_build)
+export BUILD_DIR=$(realpath ../build/${FILENAME_WO_EXT}_build)
 echo "BUILD_DIR: $BUILD_DIR"

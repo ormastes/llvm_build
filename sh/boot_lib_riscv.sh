@@ -53,7 +53,7 @@ pushd $BUILD_DIR
 
 set -x  # Echo the next command and then run it
 
-cmake ../llvm-project/${CMAKE_START_MODULE}  --fresh \
+cmake ../../llvm-project/${CMAKE_START_MODULE}  --fresh \
    -DCMAKE_BUILD_TYPE=RelWithDebInfo -DLLVM_INCLUDE_TESTS=FALSE  \
    -DLLVM_ENABLE_RUNTIMES="compiler-rt;libcxx;libcxxabi" \
    ${TRIPLE_SETTING} \
