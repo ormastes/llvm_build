@@ -1,0 +1,8 @@
+{
+    "configurePresets": [
+    {
+      "name": "pgo",
+      "inherits": "base"
+    }
+  ]
+}

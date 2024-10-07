@@ -81,6 +81,13 @@ RUN cd /workspace/downloads/picolibc &&  meson build_riscv -Dincludedir=picolibc
 RUN cd /workspace/downloads/picolibc/build_riscv && ninja
 RUN cd /workspace/downloads/picolibc/build_riscv && ninja install
 
+# --no-sleep --server-data-dir /root/.code --extensions-dir /root/.code/ext --cli-data-dir /root/.code/cli
+RUN code tunnel --install-extension ms-vscode.cmake-tools --install-extension ms-vscode.cpptools-extension-pack --install-extension ms-azuretools.vscode-docker --install-extension llvm-vs-code-extensions.vscode-clangd --install-extension mads-hartmann.bash-ide-vscode --install-extension github.copilot --install-extension github.copilot-chat \
+ --install-extension ms-vscode-remote.remote-containers --install-extension DavidAnson.vscode-markdownlint --install-extension vadimcn.vscode-lldb --install-extension redhat.vscode-xml --install-extension tamasfe.even-better-toml --install-extension rust-lang.rust-analyzer --install-extension ms-python.python --install-extension ms-python.debugpy
+
+# setup git change user name and email
+RUN git config --global user.name "Jonghyun Yoon"
+RUN git config --global user.email "ormastes@gmail.com"
 
 # Setup default command and/or parameters.
 EXPOSE 22

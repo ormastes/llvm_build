@@ -1,0 +1,13 @@
+{
+    "version": 7,
+    "include": [
+        "./preset/PgoPresets.json"
+    ],
+    "configurePresets": [
+        {
+            "name": "base",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/../build/${presetName}"
+        }
+    ]
+}
